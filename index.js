@@ -4,7 +4,7 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 app.use(function (req, res, next) {
- res.header("Access-Control-Allow-Origin", "https://www.sofortgeld-24.com");
+ res.header("Access-Control-Allow-Origin", "https://www.athena-financing.com");
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, PATCH");
   res.header(
     "Access-Control-Allow-Headers",
@@ -13,8 +13,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-const token = 'ff98c8cdb909815a9ed7c99850a757116fee1e510af168d8ea5b0c6f88d0cb7e';
-const collectionId = '686cdee760dad75e83251500';
+const token = '5e85c2095eb395884eebcc13cd42e8e53b717828f6ef67450167dc2037d99b06';
+const collectionId = '68c840fd84144e3b48a151f4';
 app.post('/order', async (req, res) => {
   const formData = req.body;
   const phoneFull = formData.Phone_full.replace(/\s+/g, '');
